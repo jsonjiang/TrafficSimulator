@@ -13,11 +13,14 @@ int Run(LPTSTR /*lpstrCmdLine*/ = NULL, int nCmdShow = SW_SHOWDEFAULT)
 {
 	CMessageLoop theLoop;
 	_Module.AddMessageLoop(&theLoop);
-
+	WNDPROC m_pfnSuperWindowProc = ::DefWindowProc;
+	//AtlModuleRegisterWndClassInfo(&_Module, &CTrafficSimulatorCtrl::GetWndClassInfo(), ::DefWindowProc);
+	CTrafficSimulatorCtrl::GetWndClassInfo().Register(&(m_pfnSuperWindowProc));
 	CMainDlg dlgMain;
 
 	if(dlgMain.Create(NULL) == NULL)
 	{
+		DWORD err = GetLastError();
 		ATLTRACE(_T("Main dialog creation failed!\n"));
 		return 0;
 	}

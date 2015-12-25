@@ -23,6 +23,7 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 
 	UIAddChildWindowContainer(m_hWnd);
 
+	m_myCtrl.SubclassWindow(this->GetDlgItem(IDC_CUSTOM1));
 	return TRUE;
 }
 

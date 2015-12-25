@@ -4,6 +4,7 @@
 
 #pragma once
 #include "AboutDlg.h"
+#include "TrafficSimulatorCtrl.h"
 
 class CMainDlg : public CDialogImpl<CMainDlg>, public CUpdateUI<CMainDlg>,
 		public CMessageFilter, public CIdleHandler
@@ -81,4 +82,5 @@ public:
 	}
 private:
 	CMenu menu;
+	CTrafficSimulatorCtrl m_myCtrl;
 };
