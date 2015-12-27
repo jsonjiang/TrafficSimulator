@@ -9,3 +9,8 @@ void CTrafficSimulatorCtrl::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	dc.MoveTo( rcItem.left, rcItem.top);
 	dc.LineTo(rcItem.right, rcItem.bottom);
 }
+
+LRESULT CTrafficSimulatorCtrl::OnEraseBkgnd( UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/ )
+{
+    return 1;
+}

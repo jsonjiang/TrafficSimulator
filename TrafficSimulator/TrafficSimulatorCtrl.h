@@ -1,6 +1,6 @@
 #pragma once
 
-class CTrafficSimulatorCtrl : public CWindowImpl<CTrafficSimulatorCtrl, CWindow, CControlWinTraits>, //CStatic
+class CTrafficSimulatorCtrl : public CWindowImpl<CTrafficSimulatorCtrl>, //CStatic
 	public COwnerDraw<CTrafficSimulatorCtrl>
 {
 public:
@@ -17,10 +17,7 @@ public:
 		DEFAULT_REFLECTION_HANDLER()
 	END_MSG_MAP()
 public:
-	LRESULT OnEraseBkgnd(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
-	{
-		return 1;
-	}
+	LRESULT OnEraseBkgnd(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/);
 	void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct  );
 
 	LRESULT OnCreate(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)

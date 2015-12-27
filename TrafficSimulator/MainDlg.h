@@ -33,6 +33,7 @@ public:
 		COMMAND_ID_HANDLER(ID_MENU_SET, OnMenuSet)
 		COMMAND_ID_HANDLER(IDOK, OnOK)
 		COMMAND_ID_HANDLER(IDCANCEL, OnCancel)
+        REFLECT_NOTIFICATIONS()
 	END_MSG_MAP()
 
 // Handler prototypes (uncomment arguments if needed):
