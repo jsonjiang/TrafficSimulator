@@ -2,6 +2,7 @@
 #include "MainDlg.h"
 
 
+
 LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 {
 	menu.Attach( LoadMenu( _Module.GetResourceInstance(),MAKEINTRESOURCE(IDR_MENU1)));

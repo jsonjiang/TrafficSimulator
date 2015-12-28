@@ -33,3 +33,6 @@ extern CAppModule _Module;
 #include <atldlgs.h>
 
 #include "resource.h"
+
+#include <Gdiplus.h>
+using namespace Gdiplus;

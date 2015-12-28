@@ -6,6 +6,7 @@
 
 #include "aboutdlg.h"
 #include "MainDlg.h"
+#include "Map.h"
 
 CAppModule _Module;
 
@@ -48,7 +49,7 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 
 	hRes = _Module.Init(NULL, hInstance);
 	ATLASSERT(SUCCEEDED(hRes));
-
+	CMap::InitMaps();
 	int nRet = Run(lpstrCmdLine, nCmdShow);
 
 	_Module.Term();

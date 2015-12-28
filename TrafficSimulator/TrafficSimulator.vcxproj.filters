@@ -13,6 +13,9 @@
       <UniqueIdentifier>{f76725de-cba6-4fa8-937f-3ac2637e0866}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
     </Filter>
+    <Filter Include="Header Files\map">
+      <UniqueIdentifier>{844ff399-37d0-45a3-93da-228561b7306a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -26,6 +29,12 @@
     </ClCompile>
     <ClCompile Include="TrafficSimulatorCtrl.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Header Files\map</Filter>
+    </ClCompile>
+    <ClCompile Include="Road.cpp">
+      <Filter>Header Files\map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +54,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TrafficSimulatorCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="Road.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="Vehicle.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
