@@ -7,8 +7,12 @@ struct DrawParam
 	RECT& rectMap;
 	RECT& rectView;
 	float scale;
+    
 };
 
+//Point Real2Show(Point pR, RECT rR, RECT rV){
+//    
+//}
 //Rect RECT2Rect(RECT r){
 //	return Rect(r.left, r.top, r.bottom-r.top, )
 //}

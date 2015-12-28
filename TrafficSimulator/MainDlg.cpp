@@ -8,6 +8,7 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 	menu.Attach( LoadMenu( _Module.GetResourceInstance(),MAKEINTRESOURCE(IDR_MENU1)));
 	SetMenu( menu );
 	// center the dialog on the screen
+    MoveWindow(0, 0, 1024, 700);
 	CenterWindow();
 
 	// set icons
@@ -24,7 +25,8 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 
 	UIAddChildWindowContainer(m_hWnd);
 
-	m_myCtrl.SubclassWindow(this->GetDlgItem(IDC_STATIC));
+	m_trafficCtrl.SubclassWindow(this->GetDlgItem(IDC_STATIC));
+    m_trafficCtrl.MoveWindow(5, 0, 800, 600);
 	return TRUE;
 }
 

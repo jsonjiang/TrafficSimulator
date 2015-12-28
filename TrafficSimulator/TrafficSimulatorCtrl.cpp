@@ -5,8 +5,8 @@
 void CTrafficSimulatorCtrl::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 {
 	CDCHandle dc = lpDrawItemStruct->hDC;
-	//RECT& rcItem = lpDrawItemStruct->rcItem;
-	//dc.FillRect( &rcItem, 21);
+	RECT& rcItem = lpDrawItemStruct->rcItem;
+	dc.FillRect( &rcItem, 21);
 	//dc.MoveTo( rcItem.left, rcItem.top);
 	//dc.LineTo(rcItem.right, rcItem.bottom);
 	CMap::GetGlobalMap()->Draw(DrawParam(CDCHandle(lpDrawItemStruct->hDC), lpDrawItemStruct->rcItem, lpDrawItemStruct->rcItem));

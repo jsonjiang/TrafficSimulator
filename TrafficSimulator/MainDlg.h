@@ -83,5 +83,5 @@ public:
 	}
 private:
 	CMenu menu;
-	CTrafficSimulatorCtrl m_myCtrl;
+	CTrafficSimulatorCtrl m_trafficCtrl;
 };

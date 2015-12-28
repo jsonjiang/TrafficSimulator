@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "Map.h"
 
-#define WIDTH 2000
-#define HEIGHT	1000
+#define WIDTH 800
+#define HEIGHT 600
 static CMap *g_map = NULL;
 
 void CMap::InitMaps()
@@ -13,11 +13,16 @@ void CMap::InitMaps()
 
 void CMap::Draw(DrawParam& param)
 {
-
+    std::vector<CRoad>::iterator it = m_vecRoad.begin();
+    for (;it != m_vecRoad.end();it++){
+    	it->Draw(param);
+    }
+    
 }
 
 BOOL CMap::AddRoad(CRoad& road)
 {
+    m_vecRoad.push_back(road);
 	return TRUE;
 }
 
