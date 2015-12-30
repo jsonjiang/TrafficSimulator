@@ -5,7 +5,7 @@
 class CVehicle
 {
 public:
-	UINT speed, maxSpeed, deceleration, acceleration; //m/s
+	UINT speed, maxSpeed, deceleration, acceleration, maxAcceleration, maxDeceleration; //m/s
 	UINT reflectTime;//反应时间,ms
 	Point p;
 	UINT safeDistance(){return speed*speed/2/deceleration+reflectTime*speed/1000;} //减速时间+反应时间
@@ -13,7 +13,9 @@ public:
 	static CVehicle* Alloc();
 
 private:
-	CVehicle(){}
+	CVehicle():p(0,0){
+        speed = maxSpeed = acceleration = maxAcceleration = deceleration = maxDeceleration = 0;
+    }
 	static CMemPool<CVehicle> m_vehiclePool;
 	friend class CMemPool<CVehicle>;
 };

@@ -42,6 +42,9 @@
     <ClCompile Include="Vehicle.cpp">
       <Filter>Header Files\map</Filter>
     </ClCompile>
+    <ClCompile Include="DrawUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

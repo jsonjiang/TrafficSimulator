@@ -31,6 +31,19 @@ public:
 		m_poolRecord.push_back(new std::bitset<PAGE_SIZE>(0x1));
 		return m_vecArray.back();
 	}
+    void Release(T* pObj){
+        std::list<std::bitset<PAGE_SIZE>*>::iterator it = m_poolRecord.begin();
+        int index = 0;
+        for (;it!=m_poolRecord.end();it++){
+            std::bitset<PAGE_SIZE>* poolRecord = *it;
+            T* pArray = m_vecArray[index];
+            if (pObj > pArray && pObj < pArray + PAGE_SIZE){
+                poolRecord[pObj - pArray] = 0;
+                return;
+            }
+        }
+        //throw CExption
+    }
 	~CMemPool(){
 		std::list<std::bitset<PAGE_SIZE>*>::iterator itRecord = m_poolRecord.begin();
 		for (;itRecord!=m_poolRecord.end();++itRecord){

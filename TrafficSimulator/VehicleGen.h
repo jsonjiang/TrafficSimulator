@@ -16,11 +16,14 @@ public:
 	void GenerateVehicle(){
 		std::list<CRoad*>::iterator it = m_listRoad.begin();
 		for (;it != m_listRoad.end();it++){
+            CRoad* pRoad = *it;
+            //if (pRoad->){
+            //}
 			CVehicle* pVehicle = CVehicle::Alloc();
 			pVehicle->speed = 5;
 			pVehicle->maxSpeed = 10;
-			pVehicle->acceleration = 2;
-			pVehicle->deceleration = 5;
+			pVehicle->maxAcceleration = 2;
+			pVehicle->maxDeceleration = 5;
 			pVehicle->p = (*it)->GetX();
 			(*it)->AddVehicle(pVehicle);
 		}

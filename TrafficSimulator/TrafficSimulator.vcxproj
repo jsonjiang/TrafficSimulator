@@ -109,6 +109,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DrawUtil.cpp" />
     <ClCompile Include="MainDlg.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Road.cpp" />

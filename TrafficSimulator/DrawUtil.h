@@ -16,3 +16,7 @@ struct DrawParam
 //Rect RECT2Rect(RECT r){
 //	return Rect(r.left, r.top, r.bottom-r.top, )
 //}
+
+UINT DistanceX(Point x, Point y);
+
+UINT DistanceY(Point x, Point y);
