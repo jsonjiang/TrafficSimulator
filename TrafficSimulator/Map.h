@@ -7,8 +7,9 @@ class CMap
 public:
 	static CMap* GetGlobalMap();
 	static void InitMaps();
-	BOOL AddRoad(CRoad& road);
+	BOOL AddRoad(CRoad* road);
 	void Draw(DrawParam& param);
+	void Update();
 private:
-	std::vector<CRoad> m_vecRoad;
+	std::vector<CRoad*> m_vecRoad;
 };

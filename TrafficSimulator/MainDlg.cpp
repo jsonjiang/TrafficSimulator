@@ -27,10 +27,17 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 
 	m_trafficCtrl.SubclassWindow(this->GetDlgItem(IDC_STATIC));
     m_trafficCtrl.MoveWindow(5, 0, 800, 600);
+	SetTimer(1, 200, NULL);
 	return TRUE;
 }
 
 LRESULT CMainDlg::OnMenuSet(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 {
+	return S_OK;
+}
+
+LRESULT CMainDlg::OnTimer(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
+{
+	Invalidate(TRUE);
 	return S_OK;
 }
