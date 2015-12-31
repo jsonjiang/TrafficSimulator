@@ -38,6 +38,6 @@ LRESULT CMainDlg::OnMenuSet(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/
 
 LRESULT CMainDlg::OnTimer(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 {
-	Invalidate(TRUE);
+	Invalidate(FALSE);
 	return S_OK;
 }

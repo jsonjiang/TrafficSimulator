@@ -17,13 +17,10 @@ public:
 		std::list<CRoad*>::iterator it = m_listRoad.begin();
 		for (;it != m_listRoad.end();it++){
             CRoad* pRoad = *it;
-            //if (pRoad->){
-            //}
+			//if (pRoad->){
+			//}
 			CVehicle* pVehicle = CVehicle::Alloc();
 			pVehicle->speed = 5;
-			pVehicle->maxSpeed = 10;
-			pVehicle->maxAcceleration = 2;
-			pVehicle->maxDeceleration = 5;
 			pVehicle->p = (*it)->GetX();
 			(*it)->AddVehicle(pVehicle);
 		}
@@ -34,7 +31,9 @@ private:
 	UINT m_uInterval;
 };
 
+
 VehicleGen VehicleGen::s_vehicleGen;
+
 VOID TimerProc(HWND, UINT, UINT_PTR, DWORD){
 	VehicleGen::s_vehicleGen.GenerateVehicle();
 };

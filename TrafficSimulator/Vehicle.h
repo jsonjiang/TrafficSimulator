@@ -11,6 +11,9 @@ public:
 	UINT safeDistance(){return speed*speed/2/deceleration+reflectTime*speed/1000;} //减速时间+反应时间
 	void Draw(DrawParam& param);
 	static CVehicle* Alloc();
+	static CVehicle s_v[3];
+	static UINT s_typeIndex;
+	static void InitProtoType();
 
 private:
 	CVehicle():p(0,0){
